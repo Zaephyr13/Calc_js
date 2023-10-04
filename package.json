@@ -1,0 +1,20 @@
+{
+    "name": "calculatrice",
+    "version": "1.0.0",
+    "description": "Calculatrice en JScript",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass --watch ./sass/styles.scss:assets/styles.css",
+        "prefix": "postcss ./assets/styles.css --use autoprefixer -d ./assets/prefixed/"
+    },
+    "author": "Christian ANTUNA",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "^10.4.14",
+        "sass": "^1.66.1"
+    },
+    "dependencies": {
+        "postcss": "^8.4.21",
+        "postcss-cli": "^10.1.0"
+    }
+}
