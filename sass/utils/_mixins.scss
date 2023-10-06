@@ -1,0 +1,15 @@
+/* Gradients */
+
+@mixin button-gradient {
+    background: linear-gradient(to top, white, $main-background-color);
+}
+
+/* Borders */
+
+@mixin darken-border($color) {
+    border-color: darken($color, 25);
+}
+
+@mixin lighten-border($color) {
+    border-color: lighten($color, 25);
+}

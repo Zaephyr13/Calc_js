@@ -1,0 +1,8 @@
+/* Buttons */
+.button {
+    @include button-gradient;
+    border: 1px solid;
+    @include darken-border($main-background-color);
+    border-radius: 5px;
+    font-size: 48px
+}

@@ -1,0 +1,13 @@
+/* Displayer */
+
+.display {
+    background-color: $secondary-background-color;
+    text-align: right;
+    align-content: center;
+    .number {
+        font-size: 72px;
+        color: white;
+        margin-right: 10px;
+        border: 2px solid $secondary-background-color;
+    }
+}

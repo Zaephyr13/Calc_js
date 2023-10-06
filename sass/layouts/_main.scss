@@ -1,0 +1,14 @@
+/* main */
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 20px;
+    height: fit-content;
+    background-color: $main-background-color;
+    border: 2px solid;
+    @include darken-border($main-background-color);
+    border-radius: 25px;
+}
