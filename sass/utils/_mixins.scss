@@ -7,7 +7,7 @@
 /* Borders */
 
 @mixin darken-border($color) {
-    border-color: darken($color, 25);
+    border-color: darken($color, 10);
 }
 
 @mixin lighten-border($color) {

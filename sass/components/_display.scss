@@ -1,13 +1,17 @@
 /* Displayer */
 
 .display {
+    position: relative;
     background-color: $secondary-background-color;
+    height: 91px;
     text-align: right;
-    align-content: center;
     .number {
-        font-size: 72px;
+        position: absolute;
+        font-size: 40px;
         color: white;
-        margin-right: 10px;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
         border: 2px solid $secondary-background-color;
     }
 }

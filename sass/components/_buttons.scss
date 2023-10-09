@@ -1,8 +1,27 @@
 /* Buttons */
 .button {
-    @include button-gradient;
-    border: 1px solid;
-    @include darken-border($main-background-color);
+    display: grid;
+    place-items: center;
+    border: 2px solid;
     border-radius: 5px;
-    font-size: 48px
+    font-size: 24px;
+    &__number{
+        @include button-gradient;
+        @include darken-border($main-background-color);
+    }
+    &__math{
+        color: $text-blue;
+        @include button-gradient;
+        @include darken-border($main-background-color);
+    }
+    &__special{
+        color: white;
+        background-color: $button-special;
+        @include lighten-border($button-special);
+    }
+    &__validate{
+        color: white;
+        background-color: $button-validate;
+        @include lighten-border($button-validate);
+    }
 }
