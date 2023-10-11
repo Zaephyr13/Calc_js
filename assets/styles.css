@@ -2,15 +2,15 @@
 *,
 ::before,
 ::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  max-width: 800px;
-  margin: auto;
+    max-width: 800px;
+    margin: auto;
 }
 
 /* Colors */
@@ -18,87 +18,117 @@ body {
 /* Borders */
 /* Displayer */
 .display {
-  position: relative;
-  background-color: #252525;
-  height: 91px;
-  text-align: right;
+    position: relative;
+    background-color: #252525;
+    height: 91px;
+    text-align: right;
 }
 .display .number {
-  position: absolute;
-  font-size: 40px;
-  color: white;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  border: 2px solid #252525;
+    position: absolute;
+    font-size: 48px;
+    color: white;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid #252525;
 }
 
 /* numpad */
 .numpad {
-  display: grid;
-  padding: 22px;
-  grid-template-columns: repeat(4, 84px);
-  grid-template-rows: repeat(5, 67px);
-  grid-gap: 25px;
-  border: 1px solid;
-  border-top: none;
-  border-color: #e1e1e1;
+    display: grid;
+    padding: 22px;
+    grid-template-columns: repeat(4, 84px);
+    grid-template-rows: repeat(5, 67px);
+    grid-gap: 25px;
+    border: 1px solid;
+    border-top: none;
+    border-color: #e1e1e1;
 }
 
+/* Equal button */
 .button:nth-child(8) {
-  grid-column: 4/5;
-  grid-row: 2/6;
+    grid-column: 4/5;
+    grid-row: 2/6;
 }
 
 /* Buttons */
 .button {
-  display: grid;
-  place-items: center;
-  border: 2px solid;
-  border-radius: 5px;
-  font-size: 24px;
+    display: grid;
+    place-items: center;
+    border: 2px solid;
+    border-radius: 5px;
+    font-size: 24px;
 }
 .button__number {
-  background: linear-gradient(to top, white, #FAFAFA);
-  border-color: #e1e1e1;
+    background: linear-gradient(to top, white, #fafafa);
+    border-color: #e1e1e1;
+}
+.button__number:hover {
+    opacity: 0.8;
+    background: #e1e1e1;
+}
+.button__number:active {
+    border-color: white;
 }
 .button__math {
-  color: #5692BA;
-  background: linear-gradient(to top, white, #FAFAFA);
-  border-color: #e1e1e1;
+    color: #5692ba;
+    background: linear-gradient(to top, white, #fafafa);
+    border-color: #e1e1e1;
+}
+.button__math:hover {
+    opacity: 0.8;
+    background: #e1e1e1;
+}
+.button__math:active {
+    border-color: white;
 }
 .button__special {
-  color: white;
-  background-color: #F0595F;
-  border-color: #fbced0;
+    color: white;
+    background-color: #f0595f;
+    border-color: #ec2a32;
+}
+.button__special:hover {
+    opacity: 0.8;
+    background-color: #d0131a;
+}
+.button__special:active {
+    border-color: #fbced0;
 }
 .button__validate {
-  color: white;
-  background-color: #2E86C0;
-  border-color: #8ac0e3;
+    color: white;
+    background-color: #2e86c0;
+    border-color: #246997;
+}
+.button__validate:hover {
+    opacity: 0.8;
+}
+.button__validate:active {
+    border-color: #8ac0e3;
+    background-color: #246997;
 }
 
 /* header */
 header {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 header h1 {
-  width: fit-content;
-  margin-bottom: 20px;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-bottom: 20px;
 }
 
 /* main */
 .calculator {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  padding: 20px;
-  height: 600px;
-  width: 500px;
-  background-color: white;
-  border: 2px solid;
-  border-color: #e1e1e1;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 20px;
+    height: 600px;
+    width: 500px;
+    background-color: white;
+    border: 2px solid;
+    border-color: #e1e1e1;
 }
 
 /*# sourceMappingURL=styles.css.map */

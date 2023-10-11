@@ -4,6 +4,10 @@
     background: linear-gradient(to top, white, $main-background-color);
 }
 
+@mixin darken-gradient($color) {
+    background: darken($main-background-color, 10);
+}
+
 /* Borders */
 
 @mixin darken-border($color) {
@@ -12,4 +16,8 @@
 
 @mixin lighten-border($color) {
     border-color: lighten($color, 25);
+}
+
+@mixin highlight {
+    opacity: 0.8;
 }

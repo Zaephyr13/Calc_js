@@ -11,6 +11,8 @@
     @include darken-border($main-background-color);
 }
 
+/* Equal button */
+
 .button:nth-child(8) {
     grid-column: 4 / 5;
     grid-row: 2 / 6;

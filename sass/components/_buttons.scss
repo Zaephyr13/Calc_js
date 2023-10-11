@@ -1,27 +1,68 @@
 /* Buttons */
+
 .button {
     display: grid;
     place-items: center;
     border: 2px solid;
     border-radius: 5px;
     font-size: 24px;
-    &__number{
+
+    &__number {
         @include button-gradient;
         @include darken-border($main-background-color);
+
+        &:hover {
+            @include highlight;
+            @include darken-gradient($main-background-color);
+        }
+
+        &:active {
+            @include lighten-border($main-background-color);
+        }
     }
-    &__math{
+
+    &__math {
         color: $text-blue;
         @include button-gradient;
         @include darken-border($main-background-color);
+
+        &:hover {
+            @include highlight;
+            @include darken-gradient($main-background-color);
+        }
+
+        &:active {
+            @include lighten-border($main-background-color);
+        }
     }
-    &__special{
+
+    &__special {
         color: white;
         background-color: $button-special;
-        @include lighten-border($button-special);
+        @include darken-border($button-special);
+
+        &:hover {
+            @include highlight;
+            background-color: darken($button-special, 20);
+        }
+
+        &:active {
+            @include lighten-border($button-special);
+        }
     }
-    &__validate{
+
+    &__validate {
         color: white;
         background-color: $button-validate;
-        @include lighten-border($button-validate);
+        @include darken-border($button-validate);
+
+        &:hover {
+            @include highlight;
+        }
+
+        &:active {
+            @include lighten-border($button-validate);
+            background-color: darken($button-validate, 10);
+        }
     }
 }
