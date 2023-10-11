@@ -113,12 +113,10 @@ buttonClear.addEventListener('click', function () {
 
 /** Validate function */
 buttonEqual.addEventListener('click', function () {
-    // if ((Number(result) - (Math.round(Number(result))))>0){
-    //     displayField.innerText = Number(result).toFixed(2)
-    // } else {
-    //     displayField.innerText = Number(result)
-    // }
     switch (math) {
+        case '':
+            addNumber()
+            break
         case '+':
             addNumber()
             break
