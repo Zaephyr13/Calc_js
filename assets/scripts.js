@@ -54,22 +54,22 @@ buttonOperand.forEach((button) => {
 
 /** Display memory and clear */
 function displayMemory() {
-    displayField.innerText = result
+    displayField.innerText = Math.round(Number(result) * 1000) / 1000
     memory = ''
 }
 
 /** Add function */
 function addNumber() {
     result = result + Math.round(Number(memory) * 1000) / 1000
-    flag = false
+    preventFirst = false
     displayMemory()
 }
 
 /** Substract function */
 function subNumber() {
-    if (flag === true) {
+    if (preventFirst === true) {
         result = Math.round(Number(memory) * 1000) / 1000
-        flag = false
+        preventFirst = false
     } else {
         result = result - Math.round(Number(memory) * 1000) / 1000
     }
@@ -78,9 +78,9 @@ function subNumber() {
 
 /** Multiply function */
 function multNumber() {
-    if (flag === true) {
+    if (preventFirst === true) {
         result = Math.round(Number(memory) * 1000) / 1000
-        flag = false
+        preventFirst = false
     } else {
         result = (result * Math.round(Number(memory) * 1000)) / 1000
     }
@@ -89,17 +89,18 @@ function multNumber() {
 
 /** Divise function */
 function divNumber() {
-    if (flag === true) {
+    if (preventFirst === true) {
         result = Math.round(Number(memory) * 1000) / 1000
-        flag = false
+        preventFirst = false
+        displayMemory()
     } else {
-        if (memory === 0) {
-            result = 'ERR DIV 0'
+        if (memory == 0) {
+            displayField.innerText = 'ERR DIV 0'
         } else {
             result = result / Number(memory)
+            displayMemory()
         }
     }
-    displayMemory()
 }
 
 /** Clear function */
@@ -108,7 +109,7 @@ buttonClear.addEventListener('click', function () {
     memory = ''
     math = ''
     displayField.innerText = '0'
-    flag = true
+    preventFirst = true
 })
 
 /** Validate function */
@@ -133,5 +134,4 @@ buttonEqual.addEventListener('click', function () {
             displayField.innerText = 'ERR'
     }
     math = ''
-    displayMemory()
 })
